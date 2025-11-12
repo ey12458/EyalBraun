@@ -4,7 +4,10 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>enter title here</title>
+    
+
+    
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
