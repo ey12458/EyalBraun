@@ -4,14 +4,80 @@
 
 <html>
 <head runat="server">
-    <title>enter title here</title>
-    
+    <style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
 
     
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body>        
+  <table width="100%" height="100%" border="0">
+       <center>
+           <tr height:"20%" width="20%">
+               <td>
+
+                   <h1>welcome to my site</h1>
+
+               </td>
+           </tr>
+       <tr>
+           <td>
+         <a href="homepage.aspx">homepage</a>
+           <td>
+      <a href="about.aspx">about</a>
+               </td>
+           <td>
+           <a href="gallery.aspx">gallery</a>
+               </td>
+           <td>
+            <a href="form.aspx">form</a>
+               </td>
+           </tr>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           </td></tr>
+       <tr></tr>
+       <tr></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       </center>
+   </table>
+
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
