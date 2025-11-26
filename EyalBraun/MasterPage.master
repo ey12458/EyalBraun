@@ -8,6 +8,13 @@
 table, th, td {
   border: 1px solid black;
 }
+
+
+
+        .nav-link {
+            margin: 0 150px;
+             font-size: larger
+        }
 </style>
 
     
@@ -15,29 +22,40 @@ table, th, td {
     </asp:ContentPlaceHolder>
 </head>
 <body>        
-  <table width="100%" height="100%" border="0">
+  <table width="100%" height="800px" border="0px">
        <center>
-           <tr height:"20%" width="20%">
+           <tr height ="100px" width="100px">
                <td>
 
                    <h1>welcome to my site</h1>
 
                </td>
            </tr>
-       <tr>
+       <tr height="10%" width="10%">
            <td>
-         <a href="homepage.aspx">homepage</a>
-           <td>
-      <a href="about.aspx">about</a>
+               <center>
+         <a href="homepage.aspx" class="nav-link" >homepage</a>
+      
+      <a href="about.aspx" class="nav-link" >about</a>
+           
+    
+           <a href="gallery.aspx" class="nav-link">gallery</a>
+              
+            <a href="form.aspx" class="nav-link">form</a>
+                   </center>
                </td>
-           <td>
-           <a href="gallery.aspx">gallery</a>
-               </td>
-           <td>
-            <a href="form.aspx">form</a>
+          </tr>
+           <tr style="background-color: #D6EEEE" >
+               <td width="100%"   height="80%">
+
+
+
+
+
+
+
                </td>
            </tr>
-          
 
 
 
@@ -53,13 +71,6 @@ table, th, td {
 
 
 
-
-
-
-
-           </td></tr>
-       <tr></tr>
-       <tr></tr>
 
 
 
