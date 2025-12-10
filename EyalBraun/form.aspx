@@ -5,6 +5,11 @@
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-   
+ <form>
+       First name<br>
+     <input type="text" id="fname"  placeholder="john"><br>
+ Last name<br>
+  <input type="text" id="lname"  placeholder="Doe">
+   </form>
 </asp:Content>
 
