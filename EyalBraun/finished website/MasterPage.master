@@ -34,14 +34,26 @@ table, th, td {
        <tr height="10%" width="10%">
            <td>
                <center>
-         <a href="homepage.aspx" class="nav-link" >homepage</a>
+                   <h1>ניווט</h1>
+         <a href="homepage.aspx" class="nav-link" >דף בית</a>
       
-      <a href="about.aspx" class="nav-link" >about</a>
+      <a href="about.aspx" class="nav-link" >אודות</a>
            
     
-           <a href="gallery.aspx" class="nav-link">gallery</a>
+           <a href="gallery.aspx" class="nav-link">גלריה</a>
               
-            <a href="form.aspx" class="nav-link">form</a>
+            <a href="" class="nav-link">הרשמה</a>
+
+                   <a href="" class="nav-link">כניסה</a>
+                   <a href="" class="nav-link">מנהל</a>
+                   <a href="" class="nav-link">חיפוש פשוט</a>
+                   <a href="" class="nav-link">חיפוש מורכב</a>
+                   <a href="" class="nav-link">חיםוש פשוט לייק</a>
+                   <a href="" class="nav-link">חיפוש מורכב לייק</a>
+                   <a href="" class="nav-link">עדכון פרטים</a>
+                   <a href="" class="nav-link">יציאה</a>
+
+
                    </center>
                </td>
           </tr>
