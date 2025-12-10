@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <style>
+        
 table, th, td {
   border: 1px solid black;
    border: none;
@@ -22,7 +23,7 @@ table, th, td {
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>        
+<body style="background-color:floralwhite;">        
   <table width="100%" height="800px" border="0">
        <center>
            <tr height ="100px" width="100px">
@@ -38,7 +39,7 @@ table, th, td {
                    <h1>ניווט</h1>
          <a href="homepage.aspx" class="nav-link" >דף בית</a>
       
-      <a href="about.aspx" class="nav-link" >אודות</a>
+      <a href="finished%20website/Default.aspx">אודות</a>
            
     
            <a href="gallery.aspx" class="nav-link">גלריה</a>
