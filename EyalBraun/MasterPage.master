@@ -7,15 +7,16 @@
     <style>
         
 table, th, td {
-  border: 1px solid black;
    border: none;
 }
 
 
 
         .nav-link {
-            margin: 0 150px;
-             font-size: larger
+             font-size: 230%;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 4px;
         }
 </style>
 
@@ -37,16 +38,14 @@ table, th, td {
            <td>
                <center>
                    <h1>ניווט</h1>
-         <a href="homepage.aspx" class="nav-link" >דף בית</a>
-      
-      <a href="finished%20website/Default.aspx">אודות</a>
-           
-    
-           <a href="gallery.aspx" class="nav-link">גלריה</a>
-              
-            <a href="" class="nav-link">הרשמה</a>
-
-                   <a href="" class="nav-link">כניסה</a>
+         <a href="homepage.aspx" class="nav-link" >
+             <img src="images/home_14424222%20(3).png" /> </a>
+      <a href="about.aspx" class="nav-link"><img src="images/information_12102200%20(1).png" /></a>
+                      <a href="gallery.aspx" class="nav-link"><img src="images/picture_1757032.png" /></a>
+          
+<a href="signinform.aspx" class="nav-link"><img src="images/צילום%20מסך%202025-12-31%20121027.png" /></a>                   
+                   <!--
+                         <a href="" class="nav-link">הרשמה</a>
                    <a href="" class="nav-link">מנהל</a>
                    <a href="" class="nav-link">חיפוש פשוט</a>
                    <a href="" class="nav-link">חיפוש מורכב</a>
@@ -57,6 +56,7 @@ table, th, td {
 
 
                    </center>
+                     -->
                </td>
           </tr>
            
