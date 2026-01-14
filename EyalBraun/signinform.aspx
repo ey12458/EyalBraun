@@ -19,6 +19,9 @@
          input[type="radio"]{
                  cursor: pointer
                  }
+        .nav-link img {
+            color: white;
+        }
 
 </style>
 </asp:Content>
@@ -28,7 +31,7 @@
     <h1> sign in form </h1>
          <br />
 
-     <form>
+     <form runat="server" method="post">
        username<br>
      <input type="text" id="uname"  placeholder="john" name="username">
                 <br />
