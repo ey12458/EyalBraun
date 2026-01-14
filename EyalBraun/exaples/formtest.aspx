@@ -19,7 +19,7 @@
   <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
        <br /> מטוס
 
-  <input type="checkbox" id="vehicle3" name="vehicle3" value="plane">
+  <input type="radio" id="vehicle3" name="vehicle3" value="plane">
      <h2>רדיו ניסיון</h2>
      <br /> yes
 <input type="radio" id="radio1" value="">
@@ -35,5 +35,13 @@
      <textarea id="essay" name="essay" rows="10" cols="100"></textarea>
 
    </form>
+
+    <table border ="1">
+        <th</th>
+
+        <td></td>
+
+        
+    </table>
 </asp:Content>
 
