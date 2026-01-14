@@ -10,55 +10,50 @@ table, th, td {
    border: none;
 }
         .nav-link {
-       text-align: center; 
+          display: inline-block;
+      border: 5px 14px solid;
+      margin:10px;
        
             
         
         }
 
-       .navbar {
+  .navbar {
   display: flex;
-  background-color: #f8f9fa
+  background-color: #333;
 }
 
-.navbar a {
-  color: gray;
-  padding: 14px 20px;
-  text-decoration: none;
-  text-align: center;
-}
+        .navbar a {
+            color: white;
+            text size: 40px;    
+            padding: 20px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
 
 .navbar a:hover {
   background-color: #ddd;
-  color: #f5f5f5
+  color: black;
 }
 
-        .nav-link img {
-            color: #f8f9fa;
-        }
+
     </style>
 
     
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body style="background-color:floralwhite;">        
+<body style="background-color:white">        
   <table width="100%" height="800px" border="0">
-       <center>
-           <tr height ="100px" width="100px">
-               <td>
+      <tr>
+          <td>
+      <center>
+                   <h1>ניווט</h1
+                </center>
 
-                   <h1>welcome to my site</h1>
-
-               </td>
-           </tr>
-       <tr height="10%" width="10%">
-           <td>
-               <center>
-                   <h1>ניווט</h1>
                    <div class="navbar">
 
-                       <div id="">
+                       <div>
  <a href="homepage.aspx" class="nav-link" >
  home page
  </a>
@@ -74,9 +69,12 @@ table, th, td {
 </a>  
                            </div>
                        <div>
-<a href="signinform.aspx" class="nav-link">
-    sign in
- </a> 
+<a href="signup%20-%20Copy.aspx" class="nav-link" >sign-up
+
+</a>
+                           </div>
+                           <div>
+                           <a href="login.aspx" class="nav-link" > login </a>
                            </div>
                       <!--
                        <a href="" class="nav-link">מנהל</a>

@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="signinform.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="signup - Copy.aspx.cs" Inherits="_Default" %>
 
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style>
-         input[type="button"]:hover {
+         input[type="submit"]:hover {
       background: #808080;
         cursor:pointer
   }
@@ -51,14 +51,16 @@
          <input type="radio" id="r2" name="y/n"/>no
 
             <br />
-         
-  
+                  <br />
+
+  <input type="checkbox"id="agree" name="agree" /> i agree to the terms and conditions
+                  <br />
 
 
 
 
          <br />
-         <input type="button" id="confrim" value="Click Me")/>
+         <input type="submit" id="submit"  name="submit" value="submit")/>
 </form>
 </asp:Content>
 
