@@ -11,7 +11,7 @@ table, th, td {
 }
         .nav-link {
           display: inline-block;
-      border: 5px 14px solid;
+      border: 5px 10px solid;
       margin:10px;
        
             
