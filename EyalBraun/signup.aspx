@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="signup - Copy.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="signup.aspx.cs" Inherits="_Default" %>
 
 
 
@@ -60,7 +60,8 @@
 
 
          <br />
-         <input type="submit" id="submit"  name="submit" value="submit")/>
+         <input type="submit" id="submit"  name="submit" value="submit"/>
+     <%   %>
 </form>
 </asp:Content>
 
