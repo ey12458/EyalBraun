@@ -33,7 +33,7 @@
 
      <form runat="server" method="post">
        username<br>
-     <input type="text" id="uname"  placeholder="john" name="username">
+     <input type="text" id="username"  placeholder="john" name="username">
                 <br />
          <br />
            email<br>
@@ -42,7 +42,7 @@
     <br />
  password
          <br />
-  <input type="text" id="pword"  placeholder="Doe" name="password">
+  <input type="text" id="password"  placeholder="Doe" name="password" >
      <br />
          <br />
          are you a developer 
@@ -56,12 +56,10 @@
   <input type="checkbox"id="agree" name="agree" /> i agree to the terms and conditions
                   <br />
 
-
-
-
          <br />
-         <input type="submit" id="submit"  name="submit" value="submit"/>
-     <%   %>
+         <input type="submit" id="submit"  name="submit" value="send"/>
+    
 </form>
+    <%= stResult %>
 </asp:Content>
 

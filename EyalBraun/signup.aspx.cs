@@ -7,20 +7,40 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
-    string stResult = "";
+    public string stResult = "";
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (IsPostBack)
+        if (Page.IsPostBack)
         {
             string username = Request.Form["username"];
             string email = Request.Form["email"];
             string password = Request.Form["password"];
 
-            string sqlInsert = "INSERT INTO tUsers VALUES (N'" + username + "', N'" + email + "', N'" + password + "')";
-            MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
-            stResult = "User " + username + " added successfully.";
-             
+            string sqlCheck =
+                "SELECT * FROM tUsers WHERE email = n'" + email + "'";
+            bool exists = MyAdoHelper.IsExist(sqlCheck);
 
+            if (exists)
+            {
+                stResult = " email already exists please enetr a new one";
+            }
+
+
+
+
+
+            else
+            {
+
+
+
+
+                string sqlInsert = "INSERT INTO tUsers VALUES (N'" + username + "', N'" + email + "', N'" + password + "')";
+                MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
+                stResult = "User " + username + " added successfully.";
+
+
+            }
         }
     }
 }
