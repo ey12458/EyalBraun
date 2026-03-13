@@ -2,40 +2,40 @@
 <html lang="en">
 <head>
     <style>
+      
 
-        .dice { /* Class for each clickable square */
-    width:350px; /* square width */
-    height: 350px; /* square height */
-    display: inline-block; /* place squares side-by-side */
-    margin: 20px; /* space between squares */
-    background: #4CAF50; /* green background color */
-    color: #fff; /* white text color */
-    text-align: center; /* center text horizontally */
-    line-height: 150px; /* center text vertically by matching height */
-    text-decoration: none; /* remove underline for links */
-    border-radius: 6px; /* slightly rounded corners */
-    font-weight: 600; /* make label slightly bold */
-    cursor: pointer; /* pointer cursor to indicate clickable */
-
-
+        .dice-container { display: flex; text-align:center ; display: flex;
+    justify-content: center; }
+.dice { font-size: 200px; line-height: 1; margin: 5px; text-align:center }
+.roll-dice { margin-top: 10px;  }
 
     </style>
+    
     <title>The Dice Game</title>
 
 </head>
 
 
 <body>
+    <center>
     <h1> the Dice Game</h1>
     <h2 id="goal"></h2>
     <script>
+        const diceFaces = { 1: "⚀", 2: "⚁", 3: "⚂", 4: "⚃", 5: "⚄", 6: "⚅" };
 
-       
+
+        function finalresult(num1, num2){
+            document.getElementById("die1").innerHTML = diceFaces[num1];
+            document.getElementById("die2").innerHTML = diceFaces[num2];
+
+
+        }
+        
+
         function gengoal() {
             let goal = Math.floor(Math.random() * 11) + 2;
             return goal;
         }
-
         let goal = gengoal();
         document.getElementById("goal").innerHTML = "Current Goal: " + goal; 
 
@@ -45,9 +45,9 @@
 
         function play() {
             let dice1 = Math.floor(Math.random() * 6) + 1;
-            document.getElementById("die1").innerHTML = dice1;
             let dice2 = Math.floor(Math.random() * 6) + 1;
-            document.getElementById("die2").innerHTML = dice2;
+            finalresult(dice1, dice2);
+
             if (dice1 + dice2 == goal) {
                 wins++;
                 rolls = 0;
@@ -76,20 +76,22 @@
         }
 
     </script>
+    <div><h2 id="wins"> Wins:0</h2></div>
+       <div><h2 id="result"> Welcom to the Dice Game Press The Button To Begin</h2></div>
 
 
-    <div class="dice" id="die1"></div> 
+       <div class="dice-container">
 
-    <div class="dice "id="die2"> </div>
-    <div>
-        <h2 id="wins"> </h2>
-        </div>
-    <div>
-<p id="result">  press the button to begin playing! </p>
-
-        </div>
-     <button id="bttn" onclick=play()>start game</button>
+              <div class="dice" id="die1">⚀</div>
+        <div class="dice" id="die2">⚀</div>
+       </div>
+      
 
 
+
+        <div>
+     <button id="bttn" class="roll-dice" onclick=play()>start game</button>
+    </div>
+        </center>
 </body>
 </html>
