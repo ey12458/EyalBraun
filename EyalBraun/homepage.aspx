@@ -24,7 +24,7 @@
     <p>Click a square to go to a game page.</p>
 
     <div> <!-- Container for the squares -->
-        <a href="Default.aspx" class="square">dice game </a> 
+        <a href="game1.aspx" class="square">dice game </a> 
         <a href="game2.html" class="square">guess the number</a> 
         <a href="game3.html" class="square">calculator</a> 
         <a href="game4.html" class="square">Game 4</a>
