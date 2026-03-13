@@ -10,7 +10,7 @@ table, th, td {
    border: none;
 }
         .nav-link {
-          display: inline-block;
+          display: inline-block;  
       border: 5px 10px solid;
       margin:10px;
        
@@ -48,7 +48,7 @@ table, th, td {
       <tr>
           <td>
       <center>
-                   <h1>ניווט</h1
+                   <h1>ניווט</h1>
                 </center>
 
                    <div class="navbar">
@@ -69,7 +69,7 @@ table, th, td {
 </a>  
                            </div>
                        <div>
-<a href="signup%20-%20Copy.aspx" class="nav-link" >sign-up
+<a href="signup.aspx" class="nav-link" >sign-up
 
 </a>
                            </div>

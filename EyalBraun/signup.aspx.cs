@@ -17,12 +17,12 @@ public partial class _Default : System.Web.UI.Page
             string password = Request.Form["password"];
 
             string sqlCheck =
-                "SELECT * FROM tUsers WHERE email = n'" + email + "'";
+                "SELECT * FROM tUsers WHERE email = N'" + email + "'";
             bool exists = MyAdoHelper.IsExist(sqlCheck);
 
             if (exists)
             {
-                stResult = " email already exists please enetr a new one";
+                stResult = " email already exists please enter a new one";
             }
 
 
