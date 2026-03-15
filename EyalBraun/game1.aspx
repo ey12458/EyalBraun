@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <style>
-      
-
+        base {
+        background-color:deeppink;}
+        
         .dice-container { display: flex; text-align:center ; display: flex;
     justify-content: center; }
 .dice { font-size: 200px; line-height: 1; margin: 5px; text-align:center }
@@ -56,9 +57,13 @@
                 document.getElementById("wins").innerHTML = "wins: " + wins;
 
                 goal = gengoal();
+
                 while (goal == old) { 
                     goal = gengoal();
+
+
                 }
+                document.getElementById("goal").innerHTML = "Current Goal: " + goal; 
 
 
             }
