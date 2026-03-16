@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="homepage.aspx.cs" Inherits="Default3" %>
                                                                                                                                    
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"> 
-<style> /* Start CSS for simple squares */
+<style>
 .square { /* Class for each clickable square */
     width:350px; /* square width */
     height: 350px; /* square height */
