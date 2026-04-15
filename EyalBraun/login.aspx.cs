@@ -21,12 +21,16 @@ public partial class _Default : System.Web.UI.Page
             {
                 Response.Redirect("adminpage.aspx");
             }
-            else { 
-            string sql= "select * from users where email='" + email + "' and password='" + password + "'";
+
+            else 
+            { 
+
+            string sql= "SELECT * FROM tUsers WHERE email='" + email + "' and password='" + password + "'";
                 bool userExist = MyAdoHelper.IsExist(sql);
 
                 if (!userExist) { 
                 st= "אימייל או סיסמא לא נכונים";
+
                 }
                 else
                 {
