@@ -56,12 +56,13 @@ table, th, td {
                        <a href="homepage.aspx" class="nav-link" >homepage</a>
                            </div>
                        <div>
-                            <% (Session["user"] || Session["admin"]) { %>
+                            <% (Session["user"] == "true" || Session["admin"] == "true") 
+                                    { %>
                                
  <a href="gamepage.aspx" class="nav-link" >games page
   
  </a> 
-                           <%} %>
+                           <% } %>
                            </div>
                        <div>
  <a href="about.aspx" class="nav-link" >
@@ -74,7 +75,7 @@ table, th, td {
 </a>  
                            </div>
                        <div>
-                           <%if (!Session["user"] || !Session["admin"])
+                           <%if (!Session["user"] == "true" || !Session["admin"] == "true")
                                {  %>
 <a href="signup.aspx" class="nav-link" >sign-up</a>
                           
@@ -83,17 +84,24 @@ table, th, td {
                            <a href="login.aspx" class="nav-link" > login </a>
                                 <%} %>
                            </div>
+
+
+
                        <div>
-                           <%if (Session["user"] || Session["admin"])
+                           <%if (!Session["user"] == "true" || !Session["admin"] == "true")
                                {  %>
                            <a href="exit.aspx"  class="nav-link">logout</a>
 
                            <%} %>
                            </div>
-                          <%if (Session["admin"])
+
+
+                          <%if (Session["admin"] == "true")
                               {  %>
                         <a href="adminpage.aspx" class="nav-link">מנהל</a>
                        <%} %>
+
+
                       <!--
                       
                    <a href="" class="nav-link">חיפוש פשוט</a>
