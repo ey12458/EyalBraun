@@ -52,11 +52,16 @@ table, th, td {
                 </center>
 
                    <div class="navbar">
-
                        <div>
- <a href="homepage.aspx" class="nav-link" >
- home page
- </a>
+                       <a href="homepage.aspx" class="nav-link" >homepage</a>
+                           </div>
+                       <div>
+                            <% (Session["user"] || Session["admin"]) { %>
+                               
+ <a href="gamepage.aspx" class="nav-link" >games page
+  
+ </a> 
+                           <%} %>
                            </div>
                        <div>
  <a href="about.aspx" class="nav-link" >
@@ -69,21 +74,33 @@ table, th, td {
 </a>  
                            </div>
                        <div>
-<a href="signup.aspx" class="nav-link" >sign-up
-
-</a>
+                           <%if (!Session["user"] || !Session["admin"])
+                               {  %>
+<a href="signup.aspx" class="nav-link" >sign-up</a>
+                          
                            </div>
                            <div>
                            <a href="login.aspx" class="nav-link" > login </a>
+                                <%} %>
                            </div>
+                       <div>
+                           <%if (Session["user"] || Session["admin"])
+                               {  %>
+                           <a href="exit.aspx"  class="nav-link">logout</a>
+
+                           <%} %>
+                           </div>
+                          <%if (Session["admin"])
+                              {  %>
+                        <a href="adminpage.aspx" class="nav-link">מנהל</a>
+                       <%} %>
                       <!--
-                       <a href="" class="nav-link">מנהל</a>
+                      
                    <a href="" class="nav-link">חיפוש פשוט</a>
                    <a href="" class="nav-link">חיפוש מורכב</a>
-                   <a href="" class="nav-link">חיםוש פשוט לייק</a>
-                   <a href="" class="nav-link">חיפוש מורכב לייק</a>
+          
                    <a href="" class="nav-link">עדכון פרטים</a>
-                   <a href="" class="nav-link">יציאה</a>
+                   
 
 
                      -->
