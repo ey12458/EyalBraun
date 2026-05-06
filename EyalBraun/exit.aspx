@@ -6,7 +6,7 @@
 
     <%
        Session.Abandon(); 
-        Response.Write("succecfuly loged out");
+        //Response.Write("succecfuly loged out");
         Response.Redirect("login.aspx");
         
        %>

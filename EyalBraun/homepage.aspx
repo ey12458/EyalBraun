@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <h1> home page</h1>
-    <h2> welcome to the games site please log in to play the games</h2>
+    <h1>home page</h1>
+
 </asp:Content>
 

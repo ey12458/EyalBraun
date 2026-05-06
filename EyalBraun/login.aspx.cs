@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class _Default : System.Web.UI.Page
+public partial class login : System.Web.UI.Page
 {
     public string st = "";
     protected void Page_Load(object sender, EventArgs e)
@@ -18,7 +18,7 @@ public partial class _Default : System.Web.UI.Page
             string password = Request.Form["password"];
 
             //התחברות מנהל
-            if (email == "eybral@gmail.com" && password == "12345678")
+            if (email == "eybral@gmail.com" && password == "eybral")
             {
                 Session["username"] = "Manager";
                 Session["admin"] = "true";
@@ -36,12 +36,15 @@ public partial class _Default : System.Web.UI.Page
                 if (dt.Rows.Count == 0)
                 {
                     st = " error";
+                    Response.Redirect("login.aspx");
+
                 }
                 else {
                     Session["user"] = "true";
-                    Session["name"]=dt.Rows[0]["username"];
-                
-                 }
+                    Session["username"] =dt.Rows[0]["username"];
+                    Response.Redirect("homepage.aspx");
+
+                }
 
                 /* if (!userExist) { 
                 st= "אימייל או סיסמא לא נכונים";
