@@ -73,13 +73,7 @@
 
     <h1> log in form </h1>
          <br />
-               first name<br>
-<input type="text" id="first name"  placeholder="john" name="fname">
-           <br />
-               last name<br>
-<input type="text" id="lastanme"  placeholder="doe" name="lname">
-           <br /> 
-
+    
            email<br>
 <input type="text" id="email"  placeholder="example@gmail.com" name="email">
            <br />

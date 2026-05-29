@@ -28,8 +28,13 @@
 
      <br />
      <input type="button" id="button1"value="click me">
-
-
+       <br /> 
+  
+<select name="cars">
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat">Fiat</option>
+</select>   
      <br /> 
      <h2>write an essay</h2>
      <textarea id="essay" name="essay" rows="10" cols="100"></textarea>

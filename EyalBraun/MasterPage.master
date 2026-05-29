@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <style>
+          
         table, th, td {
             border: none;
         }
@@ -39,16 +40,7 @@
 </head>
 <body style="background-color: white">
 
-    <% if ((Session["user"] != "true") && (Session["admin"] != "true"))
-        { %>
-    <h2>welcome to the games site please log in to play the games</h2>
-    <% }
-    else
-    { %>
-    <h2>שלום <%= Session["username"] %></h2>
-    <% } %>
-
-    <table width="100%" height="800px" border="0">
+    <table width="100%" height="auto" border="0">
         <tr>
             <td>
                 <center>
@@ -106,6 +98,8 @@
             </td>
         </tr>
     </table>
+    <br />
+ 
 
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>

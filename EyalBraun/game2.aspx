@@ -15,44 +15,29 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
     <script>
-        function gengoal() {
-            return(Math.floor(Math.random() * 100) + 1);
+        let start = false;
+        goal = Math.floor(Math.random() * 100) + 1;
+        permgoal = 0;
+        function startgame() {
 
-        }
-        function play()
-        {
-            let goal = gengoal();
-            let gamestart = confirm("do you want to play again");
-            while (gamestart) {
-
-                let guess = prompt("guess the number between 1 and 100", 100);
-
-                if (guess > goal) {
-                    document.getElementById("screen").innerHTML = "too high try again";
-                    setTimeout(2000); 
-                    gamestart = confirm("do you want to play again");
-                }
-                else if (guess < goal) {
-                    document.getElementById("screen").innerHTML = "too low try again";
-                    setTimeout(2000); 
-                    gamestart = confirm("do you want to play again");
-                }
-                   
-
-                else {
-                    document.getElementById("screen").innerHTML = "congras";
-
-                    setTimeout(2000); 
-                  gamestart=confirm("do you want to play again");
-
-                }
+            if (!start) { 
+                permgoal = goal;
+                start = true;
+                game(goal);
             }
-                return;
-            
-            
+            if (start) {
+                game(permgoal);
+            }
+
+
+
+
+            function game(permgoal) {
+
+                if()
+
+
         }
-
-
     </script>
 
     <div>

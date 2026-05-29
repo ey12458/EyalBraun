@@ -24,10 +24,10 @@
     <p>Click a square to go to a game page.</p>
 
     <div> <!-- Container for the squares -->
-        <a href="game1.aspx" class="square">dice game </a> 
-       <a href="game2.aspx" class="square">guess the number</a>
-        <a href="game3.html" class="square">calculator</a> 
-        <a href="game4.html" class="square">Game 4</a>
+        <a href="game1(fixed).aspx" class="square">dice game </a> 
+      <a href="calculator.aspx"class="square">calculator</a>
+         <a href="game2.aspx" class="square">guess the number(w.i.p)</a>
+        <a href="game4.html" class="square">Game 4(coming soon)</a>
          <a href="game4.html" class="square">Game 5(coming soon)</a>
          <a href="game4.html" class="square">Game 6(coming soon)</a>
     </div>

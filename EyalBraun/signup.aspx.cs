@@ -35,7 +35,7 @@ public partial class signup : System.Web.UI.Page
                 string sqlInsert = "INSERT INTO tUsers VALUES (N'" + username + "', N'" + email + "', N'" + password + "')";
                 MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
                 stResult = "User " + username + " added successfully.";
-                Response.Redirect("homepage.aspx");
+                Response.Redirect("login.aspx");
 
             }
         }

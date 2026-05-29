@@ -13,7 +13,7 @@
         height:950px;
         border-style: solid;
   border-width: 5px;
-  border-color:blue;
+  border-color:black;
         
         
         }
@@ -30,7 +30,7 @@
             height: 200px;
             border-style: solid;
             border-width: 5px;
-            border-color: green;
+            border-color: black;
             font-size: 50px;
            
         }
