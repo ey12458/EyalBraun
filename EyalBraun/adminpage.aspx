@@ -2,7 +2,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style>
-        
+        .styled-table {
+        border: 2px solid;
+        }
+        table, td, th {
+  border: 1px solid;
+  padding: 10px;
+}
+
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">

@@ -69,7 +69,7 @@
 
 
         <form name="form1" method="post" runat="server" onsubmit="return checkAll();">
-
+            <center>
 
     <h1> log in form </h1>
          <br />
@@ -86,6 +86,8 @@
        
          <br />
          <input type="submit" id="submit" name="submit" value=" submit")/>
+                    </center>
+
 </form>
       <% =st %>
 </asp:Content>

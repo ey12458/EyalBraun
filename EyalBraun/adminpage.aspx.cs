@@ -19,7 +19,7 @@ public partial class adminpage : System.Web.UI.Page
 
         if (dt.Rows.Count > 0)
         {
-            st = "<table border='1'>";
+            st = "<table class = 'styled-table' border='1'>";
             st += "<tr>";
             for (int j = 0; j < dt.Columns.Count-1; j++)
             {

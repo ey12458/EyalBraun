@@ -36,7 +36,8 @@ public partial class login : System.Web.UI.Page
                 if (dt.Rows.Count == 0)
                 {
                     st = " error";
-                    Response.Redirect("login.aspx");
+                    //Response.Redirect("login.aspx");
+                    //אם עברת דף לא יראו את הודעת השגיאה
 
                 }
                 else {

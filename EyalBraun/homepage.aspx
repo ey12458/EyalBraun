@@ -8,6 +8,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+
       <center class="de">  <h1> welcome to the game website </h1>
 
      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ-6YJmcvvoiAskN4fo4mdCZ3khWiLrcRU7gpsiC0Yfu7L7bQ776RuuXkxd9Okg"/>

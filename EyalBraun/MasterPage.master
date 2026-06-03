@@ -6,21 +6,25 @@
 <head runat="server">
     <style>
           
+        /* טבלה של כל העמוד  */
         table, th, td {
             border: none;
+            
         }
-
+        /* */
         .nav-link {
+          
             display: inline-block;
             border: 5px 10px solid;
             margin: 10px;
         }
-
+        /* רקע */
         .navbar {
             display: flex;
             background-color: #333;
         }
 
+        /*  טקסט בתוך */
             .navbar a {
                 color: white;
                 font-size: 40px;
@@ -28,8 +32,9 @@
                 text-decoration: none;
                 text-align: center;
             }
-
-                .navbar a:hover {
+            
+            /* גורם לטקסט לשנות צבע ברגע שהעכבר מעליו */
+                  .navbar a:hover { 
                     background-color: #ddd;
                     color: black;
                 }
@@ -39,8 +44,10 @@
     </asp:ContentPlaceHolder>
 </head>
 <body style="background-color: white">
+        <center>
 
     <table width="100%" height="auto" border="0">
+
         <tr>
             <td>
                 <center>
@@ -97,7 +104,9 @@
 
             </td>
         </tr>
+
     </table>
+
     <br />
  
 

@@ -15,7 +15,9 @@ public partial class signup : System.Web.UI.Page
             string username = Request.Form["username"];
             string email = Request.Form["email"];
             string password = Request.Form["password"];
-
+            string Lname = Request.Form["Lname"];
+            string Fname = Request.Form["Fname"];
+            string dev = Request.Form["dev"];
             string sqlCheck =
                 "SELECT * FROM tUsers WHERE email = N'" + email + "'";
             bool exists = MyAdoHelper.IsExist(sqlCheck);
@@ -32,9 +34,9 @@ public partial class signup : System.Web.UI.Page
             else
             {
 
-                string sqlInsert = "INSERT INTO tUsers VALUES (N'" + username + "', N'" + email + "', N'" + password + "')";
+                string sqlInsert = "INSERT INTO tUsers VALUES (N'" + Fname + "', N'" + Lname + "', N'" + username + "', N'" + email + "',  N'" + dev + "',N'" + password + "')";
                 MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
-                stResult = "User " + username + " added successfully.";
+               
                 Response.Redirect("login.aspx");
 
             }
