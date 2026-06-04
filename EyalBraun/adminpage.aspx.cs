@@ -21,7 +21,7 @@ public partial class adminpage : System.Web.UI.Page
         {
             st = "<table class = 'styled-table' border='1'>";
             st += "<tr>";
-            for (int j = 0; j < dt.Columns.Count-1; j++)
+            for (int j = 0; j < dt.Columns.Count; j++)
             {
                 st += "<th>";
                 st += dt.Columns[j].ColumnName;
@@ -30,10 +30,10 @@ public partial class adminpage : System.Web.UI.Page
            
             st += "</tr>";
 
-            for (int i = 0; i < dt.Rows.Count-1; i++)
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
                     st += "<tr>";
-                for (int j = 0; j < dt.Columns.Count-1; j++)
+                for (int j = 0; j < dt.Columns.Count; j++)
                 {
                     st += "<td>";
                     st += dt.Rows[i][j];

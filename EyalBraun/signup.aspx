@@ -6,156 +6,183 @@
 
       <script language="javascript">
 
+        
+
           function checkAll() {
-              firstName = "";
-              lastname = "";
-              PassErr = "";
+              
+              fNameErr = "";
+              lNameErr = "";
               userErr = "";
+              passErr = "";
               mailErr = "";
-              f = true;
+              devErr = "";
+
+              let f = true;
 
               if (checkFirstName() == false) {
-                  document.getElementById("FnameErr").innerHTML = firstName
+                  document.getElementById("FnameErr").innerHTML = fNameErr;
                   f = false;
+              } else { document.getElementById("FnameErr").innerHTML = ""; }
 
-              }
-              if (checklastname() == false) { 
-              document.getElementById("LnameErr").innerHTML = lastname
-              f = false;
-          }
+              if (checklastname() == false) {
+                  document.getElementById("LnameErr").innerHTML = lNameErr;
+                  f = false;
+              } else { document.getElementById("LnameErr").innerHTML = ""; }
+
               if (checkuser() == false) {
+                  document.getElementById("usernameERR").innerHTML = userErr;
                   f = false;
-                  document.getElementById("usernameERR").innerHTML = userErr
-              }
-              if (checkpass() == false) {
-                  f = false;
-                  document.getElementById("PassErr").innerHTML = PassErr
-              }
-              if (checkemail() == false) {
-                  f = false;
-                  document.getElementById("MailErr").innerHTML = mailErr
-              }
+              } else { document.getElementById("usernameERR").innerHTML = ""; }
 
+              if (checkpass() == false) {
+                  document.getElementById("PassErr").innerHTML = passErr;
+                  f = false;
+              } else { document.getElementById("PassErr").innerHTML = ""; }
+
+              if (checkemail() == false) {
+                  document.getElementById("MailErr").innerHTML = mailErr;
+                  f = false;
+              } else { document.getElementById("MailErr").innerHTML = ""; }
+
+             
+              if (checkdev() == false) {
+                  document.getElementById("devErr").innerHTML = devErr; 
+                  f = false;
+              } else {
+                  document.getElementById("devErr").innerHTML = ""; 
+              }
+             
               return f;
-          }// סוף פעולה ראשית
+          }
+
+
+
+
+
 
           function checkFirstName() {
-              name = document.getElementById("firstname").value;
-              //alert(name);
+              let name = document.getElementById("Fname").value;
+
+              // בדיקה ראשונית - האם השדה ריק
+              if (name == null || name.trim() == "") {
+                  fNameErr = "הכנס משהו";
+                  return false;
+              }
 
               if (name.length < 2 || name.length > 30) {
-                  firstName = "אורך השם הפרטי לא תקין";
-                 
+                  fNameErr = "אורך השם הפרטי לא תקין (חייב להיות בין 2 ל-30 תווים)";
                   return false;
               }
-              for (i = 0; i < name.length; i++) {
-                  const char = name[i];
 
+              for (let i = 0; i < name.length; i++) {
+                  const char = name[i];
                   // בדיקה: אם התו הוא לא רווח, והוא כן מספר
                   if (char !== ' ' && !isNaN(char)) {
-                      firstName += "+";
-                      firstName += "יש מספר בשם";
+                      fNameErr = "יש מספר בשם";
                       return false;
                   }
+              }
 
-                  }
-                  
               return true;
-          }
-          // סוף בדיקת שם
+          } // סוף בדיקת שם פרטי
+
+
+
+
+
+
+
 
           function checklastname() {
-              lname = document.getElementById("lastname").value;
-            
+              let lname = document.getElementById("Lname").value;
+
+              if (lname == null || lname.trim() == "") {
+                  lNameErr = "הכנס משהו";
+                  return false;
+              }
 
               if (lname.length < 2 || lname.length > 30) {
-                  lastname = "אורך השם האחרון לא תקין";
+                  lNameErr = "אורך השם האחרון לא תקין";
                   return false;
               }
+
               return true;
-          } 
+          }
 
           function checkpass() {
-              pass = document.getElementById("password").value;
-              if (pass.length < 4 || pass.length > 16) {
-                  passErr = "אורך השם חייב להיות בין 4 ל-16 תווים";
+              let pass = document.getElementById("password").value;
+
+              if (pass == null || pass.trim() == "") {
+                  passErr = "הכנס משהו";
                   return false;
               }
 
-              // STEP 2: Check for uppercase letter (No-Regex Loop)
+              if (pass.length < 4 || pass.length > 16) {
+                  passErr = "אורך הסיסמה חייב להיות בין 4 ל-16 תווים";
+                  return false;
+              }
+
+              // בדיקה אם קיימת אות גדולה באנגלית
               let hasUpper = false;
               for (let i = 0; i < pass.length; i++) {
                   const char = pass[i];
                   if (char >= 'A' && char <= 'Z') {
                       hasUpper = true;
+                      break;
                   }
               }
 
-              // If the loop finished and found NO uppercase letter
               if (hasUpper == false) {
                   passErr = "הסיסמה חייבת להכיל לפחות אות אחת גדולה (A-Z)";
                   return false;
               }
 
-              // If all rules pass
-              passErr = "";
               return true;
-
-
-
-
-             
-
           }
-
 
           function checkuser() {
+              let user = document.getElementById("username").value;
 
-             
-
-              user = document.getElementById("password").value;
-              if (user.length < 4|| user.length > 16) {
-                  userErr = "אורך הסיסמא  לא תקין";
-                  return false;
-              }
-              let hasEnglishLetter = false;
-              for (let i = 0; i < user.length; i++) {
-                  const char = user[i];
-                  // בודק אם התו הוא בין a ל-z או בין A ל-Z
-                  if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')) {
-                      hasEnglishLetter = true;
-                      break; // מצאנו אות אחת, אין צורך להמשיך בלולאה
-                  }
-              }
-
-              // אם הלולאה הסתיימה ולא נמצאה אף אות באנגלית
-              if (!hasEnglishLetter) {
-                  userErr = "השם  חייבת להכיל לפחות אות אחת באנגלית";
+              if (user == null || user.trim() == "") {
+                  userErr = "הכנס משהו";
                   return false;
               }
 
-              // אם הכל תקין
-              userErr = "";
+              if (user.length < 4 || user.length > 16) {
+                  userErr = "אורך שם המשתמש לא תקין";
+                  return false;
+              }
+
+              
+
               return true;
           }
-             
 
+          function checkemail() {
+              let mail = document.getElementById("email").value;
 
-              function checkemail() {
-                  mail = document.getElementById("email").value;
-                  if (mail == null) { 
-                      mailErr = "הכנס משהו ";
-                  return false
+              if (mail == null || mail.trim() == "") {
+                  mailErr = "הכנס משהו";
+                  return false;
               }
-                  if (!mail.includes('@')) {
-                      mailErr = "אימייל חייב להיות תקין";
-                      return false
 
-                  }
+              if (!mail.includes('@')) {
+                  mailErr = "אימייל חייב להיות תקין (להכיל @)";
+                  return false;
+              }
 
-}
+              return true; // הוסף כדי שהפונקציה תחזיר אמת כשהכל תקין
+          }
 
-
+          function checkdev() {
+              let r1 = document.getElementById("r1").checked;
+              let r2 = document.getElementById("r2").checked;
+              if (!r1 && !r2) {
+                  devErr= "סמן משהו"
+                  return false;
+              }
+              return true;
+          }
       </script>
 
     <style>
@@ -191,31 +218,39 @@
 
              <br />
                first name<br>
-<input type="text" id="fname"  placeholder="john" name="fname">
+                        <span id="FnameErr"></span>
+<input type="text" id="Fname"  placeholder="john" name="Fname">
+                   
            <br />
 
                last name<br>
-<input type="text" id="lname"  placeholder="doe" name="lname">
+                         <span id="LnameErr"></span>
+<input type="text" id="Lname"  placeholder="doe" name="lname">
            <br /> 
 
     
        username<br>
+           
+                     <span id="usernameERR"></span>
      <input type="text" id="username"  placeholder="john" name="username">
                 <br />
          <br />
            email<br>
+                      <span id="MailErr"></span>
 <input type="text" id="email"  placeholder="example@gmail.com" name="email">
            <br/>
     <br />
  password(must contain atleast one uppercase letter) 
+                                    <span id="PassErr"></span>
          <br />
   <input type="text" id="password"  placeholder="Doe" name="password" >
      <br />
          <br />
          are you a developer 
                      <br />
-         <input type="radio" id="r1"  name="y/n"/> yes
-         <input type="radio" id="r2" name="y/n"/>no
+                <span id="devErr"></span>
+         <input type="radio" id="r1"  name="dev" value ="yes"/> yes
+         <input type="radio" id="r2" name="dev" value ="no"/>no
 
             <br />
                   <br />
@@ -226,17 +261,22 @@
          <br />
          <input type="submit" id="submit"  name="submit" value="send"/>
                      </br>
-                     <button onclick="location.reload()">רענן עמוד / איפוס טופס</button>
-                         </br>
-             <span id="FnameErr"></span>
-    <span id="LnameErr"></span>
-                     <span id="usernameERR"></span>
-                     <span id="PassErr"></span>
-                     <span id="MailErr"></span>
+                 
+                    
+            
+
+
+              
                          </center>
 
 </form>
-    <%= stResult %>
+    <script>
+     
+
+    <%= stResult %> 
+
+        
+    </script>
 </asp:Content>
 
 
